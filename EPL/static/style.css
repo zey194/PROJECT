@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5; 
+}
+
+.banner{
+    /* width: 100%; */
+    width: 100%;
+    min-height: 100vh;
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) , url(../static/img/bg-masthead.jpg) ; */
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)) , url(../static/img/bg-masthead.jpg) ;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.8)), to(rgba(92, 77, 66, 0.8))), url("../static/img/bg-masthead.jpg"); */
+  /* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../static/img/bg-masthead.jpg"); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 15px;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav img{
+    width: 150px;
+}
+
+
+.nav-links{
+  /*  flex: 1; */
+    text-align: right;
+    padding-top: 40px;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block; 
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 50%; /* Make the button circular */
+    padding: 10px; /* Adjust padding for button size */
+}
+
+.nav-links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0072BB;
+   /*
+    background: #f44336;
+    */
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+
+.header{
+   /* 
+    background-color: black;
+    background-color: snow;
+    */
+    background-color: #15223B;
+    /* background-color: #1f2833 */
+    
+    /* width: 1263px;
+    height: 65px;
+    margin: 0px;
+    padding: 0px 0; */
+}
+
+.header {
+    width: 100%; /* Set the width to 100% */
+    height: 65px;
+    margin: 0 auto; /* Center the header horizontally */
+    padding: 0px 20px; /* Add padding to the header */
+    box-sizing: border-box; /* Include padding and border in the total width */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Spread the content evenly */
+    border-bottom: 3px solid black; 
+    /* border-radius: 15px; */
+}
+
+.logo{
+    width: 125px;
+    height: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    margin-right: 40px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.logo img {
+    border-radius: 50%; /* Make the image circular */
+    width: 50px; /* Adjust image width */
+    height: 50px; /* Adjust image height */
+}
+
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box img {
+    width: 180px; /* Adjust image width */
+    height: 200px; /* Adjust image height */
+    margin-bottom: 20px; /* Add margin to separate image from text */
+}
+
+.text-box h1{
+    font-size: 50px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.home-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff; 
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.home-btn:hover{
+  /*
+    background: #f44336; 
+    border: 1px solid #f44336;
+    */
+    border: 1px solid #0072BB;
+    background: #0072BB;
+    transition: 0.5s
+    
+}
+
+.text-box a{
+    color: white;
+}
+
+.trans:focus-within{
+    text-align: center;
+    transition-delay: 0.5s;
+} 
+
+/*------------------- Course -------------------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    /* background: #DBF3Fa; */
+    /* background: #0b0c10; */
+    /* background: #FC6A03; */
+    background: #0492C2;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    /* color: #66fcf1; */
+    color: #fff;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+}
+
+
+/*------------------- Course -------------------*/
+
+
+/*--------------Table---------*/
+
+/* Additions to indicate clickable rows */
+.course-header {
+    padding-right: 10px;
+    padding-left: 10px;
+    align-items: end;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.course-header h1 {
+    margin-top: 50px;
+    padding-left: 20px;
+    color: black;
+}
+
+.tablebox {
+    margin: 20px auto;
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+.tablebox p{
+    font-weight: 600;
+}
+
+.tablerow {
+    display: table;
+    width: 100%;
+    margin: 10px auto;
+    background: transparent;
+    padding: 12px 0;
+    color: #555;
+    font-size: 25px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 50, 0.3);
+    border-radius: 10px;
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+}
+
+.tablecell {
+    display: table-cell;
+    width: 33.33%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+    padding: 10px;
+
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.tablecell img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.tablecell h5 {
+    color: #fff;
+}
+
+.table-head {
+    /* background: #FC6A03; */
+    background: #0492C2;
+    box-shadow: none;
+    color: black;
+    font-weight: 600;
+}
+
+.tablerow:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-button {
+    background-color: #0492C2; /* Blue color for button */
+    background-color: #007bff; /* Blue color for button */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 8px 16px; /* Adjust padding to make the button smaller */
+    cursor: pointer; /* Cursor style on hover */
+    border-radius: 20px; /* Make the button almost oval-shaped */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 14px; /* Adjust font size */
+}
+
+/* Change button color on hover */
+.view-button:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+}
+
+/*--------------Table---------*/
+
+
+
+/*------------------- Footer -------------------*/
+
+
+
+.container{
+    padding-left: 200px;
+    margin-bottom: 30px;
+    max-width: 1170px;
+    /* border-radius: 15px; */
+   /* background-color: red; 
+    margin: auto;
+    */
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.footer img {
+    color :#fff;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #15223B;
+    padding: 10px 0;
+    border-radius: 15px;
+    margin-top: 100px;
+}
+
+.footer-column{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-column h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-column h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #0072BB;
+   /* background-color: #e91e63;*/
+    height: 2px;
+    box-sizing: border-box;
+    width: 70px;
+}
+
+.footer-column ul li{
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+}
+
+.footer-column ul li a:hover{
+    color: #ffffff;
+    padding-left: 9px;
+}
+
+.footer img{
+    padding-left: 20px;
+    
+}
+
+
+
+
+
+

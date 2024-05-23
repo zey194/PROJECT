@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("./img/football.jpg");
+    background-size: cover;
+    
+}
+
+nav {
+    background-color: #db5656;
+    color: #fff;
+    padding: 10px;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    color: #9a9a9a;
+    font-size: 15px;
+    padding: 40px;
+}
+
+p1 {
+    color: #9a9a9a;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.login-container,
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #0c09097a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    box-shadow: #000000;
+
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    margin-bottom: 8px;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #dbdbdba8;
+    border-radius: 20px;
+    background-color: #f4f4f440;
+    color: #000000;
+    font-size: 20px;
+}
+
+button {
+    background-color: #56e0a5;
+    color: #ffffff;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #ffe9a0;
+    color: #000000;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    transform: ease-in-out 1.5s;
+}
