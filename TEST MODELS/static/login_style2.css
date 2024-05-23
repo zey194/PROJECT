@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-image: url("football.jpg"); */
+    background-size: cover;
+    
+}
+
+nav {
+    /* background-color: #db5656; */
+    color: #fff;
+    padding: 10px;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    color: #9a9a9a;
+    font-size: 15px;
+    padding: 40px;
+}
+
+p1 {
+    color: #9a9a9a;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.login-container,
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #0c09097a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    box-shadow: #000000;
+
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    padding-right: 30px;
+}
+
+label {
+    margin-bottom: 8px;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #dbdbdba8;
+    border-radius: 20px;
+    background-color: #f4f4f440;
+    color: #000000;
+    font-size: 20px;
+}
+
+button {
+    background-color: #56e0a5;
+    color: #ffffff;
+    padding: 20px 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    align-self: center;
+    margin-top: 30px;
+    margin-left: 80px;
+    font-size: 20px;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #ffe9a0;
+    color: #000000;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    transform: ease-in-out 1.5s;
+    transform: scale(1.1);
+}
+
+.form-column {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+}
+
+
+.pred-box {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #dbdbdba8;
+    border-radius: 20px;
+    background-color: #f4f4f440;
+    color: #000000;
+    font-size: 20px;
+}
+
+/* Update the width and margin of the login-container */
+.login-container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 50px auto; /* Center the container horizontally */
+    /* background-color: #0c09097a; */
+    background-color: #365563;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    box-shadow: #000000;
+    margin-top: 30px;
+    /* margin-bottom: 150px; */
+}
+
+/* Clear floats after the columns */
+.login-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pred-button button {
+    margin-left: 470px;
+}
+
+/* chwecker */
+
+.form-column {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+}
+
+.pred-button,
+.clear-button {
+    width: 25%; /* Adjust width to fit both buttons */
+    float: left;
+    margin-right: 5%;
+}
+
+.pred-button button,
+.clear-button button {
+    width: 100%; /* Make buttons fill the entire width of the container */
+    margin-left: 0; /* Remove margin for the buttons */
+}
+.clear-button button {
+    margin-left: 160px;
+}
+
+.pred-button button {
+    margin-left: 0px;
+}
