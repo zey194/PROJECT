@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, inital-scale=1.0">
+        <title>FAST NUCES WEBSITE</title>
+        
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+        
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- font awsome -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        
+        
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+                
+    </head>
+    <body>
+
+    <!-------------------- Banner -------------------->
+
+        
+        <div class="banner">
+                <div class="header">
+                <div class="logo">
+            <nav>
+                    <!-- <img src="../static/logo.jpg" alt="uni logo"> -->
+                    <!-- <img src="../static/logo2.png" alt="uni logo"> -->
+                </div>
+                
+                <div class = "nav-links">
+                    <ul>
+                        <li><a href="http://127.0.0.1:5000/">HOME</a></li>
+                        <li><a href="http://127.0.0.1:5000/login">SIGN IN</a></li>
+                        <li><a href="http://127.0.0.1:5000/register">SIGN UP</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+                </div>
+            
+            <div class="text-box">
+                <img src="../static/img/logo4.png" alt="Your Image">
+                <h1>EPL Predict</h1>
+                <P>See Stats and Get Predictions<br></P>
+                
+                <!-- <a href="index%20-%20about%20us.html" class="home-btn">About Us</a> -->
+            </div>
+        
+        </div>
+        
+    <!-------------------- About us -------------------->
+
+
+    <div class="course">
+        <h1>About Us</h1>
+        <p></p>
+        
+        <div class="row">
+            
+            <div class="course-col">
+                <h3>Our Passion</h3>
+                <p>Our passion for this creation is fueled by our unwavering dedication to revolutionize the way football enthusiasts engage with Premier League stats and predictions, igniting a new era of immersive sports analysis</p>
+            </div>
+
+            <div class="course-col">
+                <h3>Technology</h3>
+                <p>We utilize advanced technology and a comprehensive dataset, coupled with top-tier models like Logistic Regression, to provide accurate predictions and analyses for Premier League football fans.</p>
+            </div>
+                
+            <div class="course-col">
+                <h3>Our Services</h3>
+                <p>Stay ahead of the game with our Premier League website, providing real-time stats, live predictions, and dynamic adjustments based on actual outcomes for an immersive football experience.</p>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+
+    <!----------------------- Top 5 table ----------------------->
+<div class="matches">
+
+
+    {% if match_data_live.data.match %}
+        <div>
+            <div class="course-header">
+                <h1>Live Matches</h1>
+                 </div>
+                <div class="tablebox">
+                <div class="tablerow table-head">
+                    <div class="tablecell">
+                        <h5>HomeTeam</h5>
+                    </div>
+                    <div class="tablecell">
+                        <h5></h5>
+                    </div>
+                    <div class="tablecell">
+                        <h5>AwayTeam</h5>
+                    </div>
+                    <div class="tablecell">
+                        <h5>Action</h5>
+                    </div>
+                </div>
+                {% for match in match_data_live.data.match %}
+                    <div class="tablerow">
+                    <div class="tablecell">
+                        <img src="../static/img/{{ match.home_name.lower() }}.png" alt="Team 1 Logo">
+                        <h6>{{ match.home_name }}</h6>
+                    </div>
+                    <div class="tablecell">
+                        <h6>VS</h6>
+                    </div>
+                    <div class="tablecell">
+                        <img src="../static/img/{{ match.away_name.lower() }}.png" alt="Team 2 Logo">
+                        <h6>{{ match.away_name }}</h6>
+                    </div>
+                    <div class="tablecell">
+                        <form action="{{ url_for('show_match_data', match_index=match.id) }}" method="get"> 
+                            <button type="submit" class="view-button">Open</button> 
+                        </form> 
+                    </div>
+                    </div>
+                {% endfor %}
+                </div>
+        </div>
+        
+    {% else %}
+    <div>
+        <div class="course-header">
+            <h1>Upcoming Matches</h1>
+            </div>
+        <div class="tablebox">
+            <div class="tablerow table-head">
+                <div class="tablecell">
+                    <h5>HomeTeam</h5>
+                </div>
+                <div class="tablecell">
+                    <h5></h5>
+                </div>
+                <div class="tablecell">
+                    <h5>AwayTeam</h5>
+                </div>
+                <div class="tablecell">
+                    <h5>Time</h5>
+                </div>
+                <div class="tablecell" style="padding: 10px;">
+                    <h5>Date</h5>
+                </div>
+                <!-- <div class="tablecell">
+                    <h5>Action</h5>
+                </div> -->
+            </div>
+        {% for fixture in upcoming_matches.data.fixtures %}
+            <div class="tablerow">
+                <div class="tablecell">
+                    <img src="../static/img/{{ fixture.home_name.lower() }}.png" alt="Team 1 Logo">
+                    <h6>{{ fixture.home_name }}</h6>
+                </div>
+                <div class="tablecell">
+                    <h6>VS</h6>
+                </div>
+                <div class="tablecell">
+                    <img src="../static/img/{{ fixture.away_name.lower() }}.png" alt="Team 2 Logo">
+                    <h6>{{ fixture.away_name }}</h6>
+                </div>
+                <div class="tablecell">
+                    <h6>{{ fixture.time }}</h6>
+                </div>
+                <div class="tablecell">
+                    <h6>{{ fixture.date }}</h6>
+                </div>
+                <!-- <div class="tablecell">
+                    <form action="{{ url_for('show_match_data', match_index=1) }}" method="get"> 
+                        <button type="submit" class="view-button">Open</button> 
+                   </form> 
+               </div> -->
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+  
+    {% endif %}
+    <div>
+        <div class="course-header" style="display: flex;">
+            <h1>Recent Matches</h1>
+            <form action="/" method="get" onsubmit="formatDates()" style="display: flex;  margin-left: 10px;">
+                <label for="from_date">From Date:</label>
+                <input type="date" id="from_date" name="from_date" required>
+                <label for="to_date">To Date:</label>
+                <input type="date" id="to_date" name="to_date" required>
+                <button type="submit" style="margin-left: 5px; border-radius: 10px; background-color: #0492C2; padding: 2px 10px 2px 10px;">Search</button>
+            </form>
+        </div>
+    
+        <div class="tablebox">
+            <div class="tablerow table-head">
+                <div class="tablecell">
+                    <h5>HomeTeam</h5>
+                </div>
+                <div class="tablecell">
+                    <h5></h5>
+                </div>
+                <div class="tablecell">
+                    <h5>AwayTeam</h5>
+                </div>
+                <div class="tablecell">
+                    <h5>Action</h5>
+                </div>
+            </div>
+        
+     <h1></h1>
+             {% for match in match_data.data.match %}
+            <div class="tablerow">
+                <div class="tablecell">
+                    <img src="../static/img/{{ match.home_name.lower() }}.png" alt="Team 1 Logo">
+                    <!-- <img src="../static/team_logos/home_team_logo.jpg" alt="Home Team Logo"> -->
+                    <h6>{{match.home_name}}</h6>
+                </div>
+                <div class="tablecell">
+                    <h6>VS</h6>
+                </div>
+                <div class="tablecell">
+                    <img src="../static/img/{{ match.away_name.lower() }}.png" alt="Team 1 Logo">
+                    <h6>{{match.away_name}}</h6>
+                </div>
+                <div class="tablecell">
+                     <form action="{{ url_for('show_match_data', match_index=match.id) }}" method="get"> 
+                         <button type="submit" class="view-button">Open</button> 
+                    </form> 
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+    <!----------------------- Logout ----------------------->
+    <form action="{{ url_for('logout') }}" style="display: inline-block; margin-right: 20px; margin-left: 60px;">
+        <button type="submit" class="view-button" style="margin-top: 30px;">Logout</button>
+    </form>
+    <!----------------------- Refresh ----------------------->
+    <form action="{{ url_for('refresh') }}" style="display: inline-block;" method="get">
+        <button type="submit" class="view-button" style="margin-top: 30px;">Refresh</button>
+    </form>
+    <!---------------- Footer --------------->
+    <div class="footer">
+        <img src="../static/img/logo0.png" alt="logo">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h4>Daraz</h4>
+                    <ul>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Our services</a></li>
+                        <li><a href="">Privacy policy</a></li>
+                        <li><a href="">Affiliations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Email</a></li>
+                        <li><a href="">FaceBook</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>    
+    </div>
+
+    
+    </body>
+    <script>
+        function formatDates() {
+            var fromDateInput = document.getElementById('from_date');
+            var toDateInput = document.getElementById('to_date');
+        
+            console.log("Before formatting - From Date:", fromDateInput.value);
+            console.log("Before formatting - To Date:", toDateInput.value);
+        
+            // Format the dates to "YYYY-MM-DD" format
+            fromDateInput.value = formatDate(fromDateInput.value);
+            toDateInput.value = formatDate(toDateInput.value);
+        
+            console.log("After formatting - From Date:", fromDateInput.value);
+            console.log("After formatting - To Date:", toDateInput.value);
+        }
+        
+        function formatDate(dateString) {
+        var date = new Date(dateString);
+
+        // Set the timezone to UTC
+        date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+
+        var year = date.getUTCFullYear();
+        var month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+        var day = date.getUTCDate().toString().padStart(2, '0');
+
+         return year + '-' + month + '-' + day;
+        }
+        </script>
+        
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

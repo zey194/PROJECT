@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_style.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login to Your Account</h1>
+        <form action="{{ url_for('login') }}" method="post"> <!-- Ensure form action points to the login endpoint -->
+
+            <label for="username_or_email">Username or Email:</label>
+            <input type="text" id="username_or_email" name="username_or_email" /> <!-- Use the same name for username/email field -->
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" /> <!-- Use the same name for password field -->
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Create Account</a></p> <!-- Ensure registration link points to the register endpoint -->
+    </div>
+</body>
+</html>
